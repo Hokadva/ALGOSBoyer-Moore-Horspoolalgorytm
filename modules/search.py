@@ -37,6 +37,9 @@ def _find_element(string: str, sub_string: str, case_sensitivity: bool) -> tuple
     """
     that function find substring in string with use table of offset
     """
+    if string == "" or sub_string == "":
+        return tuple("")
+
     if not case_sensitivity:
         string = string.lower()
         sub_string = sub_string.lower()
